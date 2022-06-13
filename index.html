@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="date" content='2022-06-12'>
+    <title>CS 16 - Summer Session C, 2022</title>
+  </head>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <body>
+    <p>CS 16 - Summer Session C, 2022</p>
+<h1 id="syllabus">Syllabus</h1>
+<p>Fundamental building blocks for solving problems using computers.
+Topics include basic computer organization and programming constructs:
+memory, CPU, binary arithmetic, variables, expressions, statements,
+conditionals, iteration, functions, parameters, recursion, primitive and
+composite data types, and basic operating system and debugging
+tools.</p>
+<p>C++ is the programming language used in this course.</p>
+<p><strong>Instructor:</strong> Alejandro Quevedo</p>
+<p><strong>Teaching Assistants:</strong> TBD</p>
+<p><strong>ULA:</strong> TBD</p>
+<h2 id="lectures">Lectures</h2>
+<p><strong>When:</strong> Tuesdays, Wednesdays, and Thursdays from
+2:00pm - 3:20pm</p>
+<p><strong>Where:</strong> Harold Frank Hall, Room 1104</p>
+<h2 id="lab-sections">Lab Sections</h2>
+<p>Labs will be held in <strong>Phelps Hall, Room 3525</strong> starting
+the second week of the course.</p>
+<p><strong>Lab Section 1:</strong> Wednesday, 4:00pm - 4:50pm</p>
+<p><strong>Lab Section 2:</strong> Wednesday, 5:00pm - 5:50pm</p>
+<p><strong>Lab Section 3:</strong> Wednesday, 6:00pm - 6:50pm</p>
+<p>Lab sections will be live and synchronous, but will
+<strong>not</strong> be recorded. Attendance will not be taken but
+attendance is highly encouraged for your benefit. Please only attend the
+lab section you are registered for.</p>
+<h2 id="office-hours">Office Hours</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Instructor</th>
+<th>Day / Time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alejandro</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>TA</th>
+<th>Day / Time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TBD</td>
+<td>TBD</td>
+</tr>
+<tr class="even">
+<td>TBD</td>
+<td>TBD</td>
+</tr>
+<tr class="odd">
+<td>TBD</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<h2 id="online-textbook">Online Textbook</h2>
+<p>Homework, reading assignments, and labs (at least initially) will be
+administered via the online <strong>Zybook</strong>. To join the
+textbook, follow the instructions below:</p>
+<ol type="1">
+<li><p>Sign in or create an account at learn.zybooks.com</p></li>
+<li><p>Enter zyBook code: UCSBCMPSC16QuevedoSummer2022</p></li>
+<li><p>Subscribe</p></li>
+</ol>
+<h2 id="other-online-resources">Other Online Resources</h2>
+<ul>
+<li><strong>Gauchospace:</strong> We will use Gauchospace for the course
+website. We may transition to a GitHub site further along (around when
+we transition away from ZyBooks Labs) but we’ll probably just stick with
+Gauchospace.</li>
+<li><strong>Gradescope and/or GitHub:</strong> Eventually we will be
+submitting lab assignments to Gradescope and/or Github. More to come on
+this later.</li>
+</ul>
+<h2 id="graded-components">Graded Components</h2>
+<ol type="1">
+<li><p><strong>Reading:</strong> Between each class, you’ll have reading
+to do in the textbook. There is too much information you need to learn
+in this course for you to get all of it in lecture, so the readings are
+essential. The reading assignments for the next class can be found in
+the lecture notes for that class.</p></li>
+<li><p><strong>Homework:</strong> Homeworks will be posted on the course
+website each week. These will be synergistic with the reading. As you
+complete reading assignments in the Zybook, the homework problems
+(consisting of Practice and Challenge Activities in the Zybook reading)
+can be completed simultaneously. Specific PAs and CAs will be assigned
+on the course website each week.</p></li>
+<li><p><strong>Quizzes:</strong> Quizzes will be administered at the end
+of each week. Exact dates and times of quizzes is TBD (at the
+present).</p></li>
+<li><p><strong>Programming Assignments / Labs:</strong> Programming
+assignments (also called labs) are given once a week, and are typically
+started in Lab Sections on Wednesdays. You may work on them during
+closed labs and plan to finish the assignment on your own time outside
+of lab. You must however, read the assignment and attempt the parts that
+you do with little assistant as soon as the assignment is released. The
+assumption is that you at the very least read the assignment before your
+lab section. You are encouraged to use pair programming in most of the
+labs but please read the collaboration policy for each lab. Some labs
+have to be completed individually.</p></li>
+<li><p><strong>Final Exam / Final Project:</strong> TBD</p></li>
+</ol>
+<h2 id="grading-breakdown">Grading Breakdown</h2>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 48%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Assessment</th>
+<th>Description</th>
+<th>Percentage of Final Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Participation Activities (PAs)</td>
+<td>“Reading” Assignments, completed within the ZyBook</td>
+<td>10%</td>
+</tr>
+<tr class="even">
+<td>Challenge Activities (CAs)</td>
+<td>“Homework” Assignments, also completed in the Zybook</td>
+<td>15%</td>
+</tr>
+<tr class="odd">
+<td>Lab Activities (LAs)</td>
+<td>Lab Activities, first in the ZyBook and then completed outside
+<strong>(TBD)</strong></td>
+<td>25%</td>
+</tr>
+<tr class="even">
+<td>Quizzes</td>
+<td>Submitted over gradescope</td>
+<td>25%</td>
+</tr>
+<tr class="odd">
+<td>Final Exam</td>
+<td>In class at the end of the Session C <strong>(Exact Date
+TBD)</strong></td>
+<td>25%</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Final Grade</th>
+<th>Range</th>
+<th>Final Grade</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>93 - 100 %</td>
+<td>C+</td>
+<td>77 - 80 %</td>
+</tr>
+<tr class="even">
+<td>A-</td>
+<td>90 - 93 %</td>
+<td>C</td>
+<td>73 - 77 %</td>
+</tr>
+<tr class="odd">
+<td>B+</td>
+<td>87 - 90 %</td>
+<td>C-</td>
+<td>70 - 73 %</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>83 - 87 %</td>
+<td>D</td>
+<td>60 - 70 %</td>
+</tr>
+<tr class="odd">
+<td>B-</td>
+<td>80 - 83 %</td>
+<td>F</td>
+<td>&lt; 60 %</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Curving:</strong> The grade scale represents the minimum
+letter grade you will be assigned. At the instructor’s discretion, the
+grading scale may be altered in the students’ favor if this will better
+reflect the students’ mastery of the material. Thus, if there is a
+“curve”, it will be applied at the end, <strong>NOT</strong> to
+individual assignments.</p>
+<p><strong>A+ Grades:</strong> These may be awarded to the very best
+performing students in the class—but the cutoff for A+ grades will be
+determined at the end of the course at the discretion of the instructor
+(there is no pre-determined cutoff—an average of 97 or more doesn’t
+guarantee you an A+ grade.)</p>
+<h2 id="course-schedule">Course Schedule</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Topic</th>
+<th>ZyBook Reading</th>
+<th>Assignments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Intro to C++, Variable Types</td>
+<td>Ch. 1, 2</td>
+<td>HW 1, Lab 1, Quiz 1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Introduction to Functions, Loops</td>
+<td>Ch. 3, 4</td>
+<td>HW 2, Lab 2, Quiz 2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Arrays and Vectors, If/Else Branching</td>
+<td>Ch. 5, 6</td>
+<td>HW 3, Lab 3, Quiz 3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>More on Functions, Intro to Pointers</td>
+<td>Ch. 7, 8</td>
+<td>HW 4, Lab 4, Quiz 4</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Intro to Streams, File I/O, and Struct</td>
+<td>Ch. 9, 10</td>
+<td>HW 5, Lab 5, Quiz 5</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Classes</td>
+<td>Ch. 11, 12</td>
+<td>HW 6, Lab 6, Quiz 6</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Recursion</td>
+<td>Ch. 13</td>
+<td>HW 7, Lab 7, Quiz 7</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>More on Pointers and Classes</td>
+<td>Ch. 14, 15</td>
+<td>HW 8, Lab 8, Quiz 8</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Memory, Streams and Inheritance</td>
+<td>Ch. 16, 17, 18</td>
+<td>HW 9, Lab 9, Quiz 9</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Review, wrap-up</td>
+<td></td>
+<td>Final Exam</td>
+</tr>
+</tbody>
+</table>
+  </body>
+</html>
